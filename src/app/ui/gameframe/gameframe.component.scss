@@ -1,0 +1,30 @@
+@import "~assets/scss/_common";
+
+.game-frame {
+  background: white;
+  height: 504px;
+  width: 764px;
+  background: url("~assets/img/game-frame.png");
+  margin: 0 auto;
+  position: relative;
+
+  // prevent user selection
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button-inventory {
+  height: 36px;
+  width: 33px;
+  position: absolute;
+  right: 106px;
+  top: 168px;
+  cursor: pointer;
+  &.is-active {
+    background: url("~assets/img/button-inventory-active.png");
+  }
+}

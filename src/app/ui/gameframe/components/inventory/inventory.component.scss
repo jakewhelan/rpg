@@ -1,0 +1,33 @@
+@import "~assets/scss/_common";
+
+:host {
+  @include grid(row, null, align-top);
+  width: 190px;
+  height: 260px;
+  position: absolute;
+  top: 205px;
+  right: 28px;
+  padding: 4px 10px;
+}
+
+.item {
+  @include grid(column, 3);
+  width: 32px;
+  height: 32px;
+  padding: 0 5px;
+  text-align: center;
+  line-height: 32px;
+  margin: 2px 0;
+}
+
+.item__img {
+  height: 32px;
+  width: 32px;
+  margin: 0 auto;
+  cursor: pointer;
+  &.is-selected {
+    filter: 
+      drop-shadow(1px 1px 0 $brand-white) 
+      drop-shadow(-1px -1px 0 $brand-white);
+  }
+}

@@ -1,0 +1,20 @@
+<div #displayBox class="display-box">
+  <p *ngFor="let message of messages" class="chat-message" [ngClass]="message.stylingClass">
+    <ng-container *ngIf="isPublicMessage(message)">{{message.author}}:</ng-container>
+    <span>{{message.body}}</span>
+  </p>
+  <!--<p>1dd:<span>It's working !!!!!</span></p>
+  <p>Jake:<span>Buying cammy tab 5k</span></p>
+  <p>SIay It All:<span>Gimme 3,8+ dscim?</span></p>
+  <p>Jake<span>Buying cammy tab 5k</span></p>
+  <p>1dd<span>It's working !!!!!</span></p>
+  <p>Jake:<span>Buying cammy tab 5k</span></p>
+  <p>SIay It All:<span>Gimme 3,8+ dscim?</span></p>
+  <p>Jake:<span>Buying cammy tab 5k</span></p>-->
+</div>
+<form class="input-box" (ngSubmit)="onFormSubmit(commandForm)" #commandForm="ngForm" novalidate>
+  <div class="input-label">Jake:</div>
+  <div class="input-container">
+    <input type="text" id="command" name="command" #command="ngModel" ngModel maxlength="100" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+  </div>
+</form>

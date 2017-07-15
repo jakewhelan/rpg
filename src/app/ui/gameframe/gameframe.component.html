@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="game-frame">
+    <rpg-chat></rpg-chat>
+    <rpg-inventory></rpg-inventory>
+    <div class="button-inventory" (click)="activeTab = 'inventory'" [ngClass]="{'is-active': activeTab=='inventory'}"></div>
+  </div>
+</div>

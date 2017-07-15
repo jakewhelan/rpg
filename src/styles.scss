@@ -1,0 +1,8 @@
+@import "./assets/scss/main.scss";
+
+.container {
+  max-width: $app-width !important;
+  min-width: 0 !important;
+  margin: 0 auto;
+  padding: 1px 20px 0;
+}

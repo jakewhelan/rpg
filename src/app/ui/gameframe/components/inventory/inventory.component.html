@@ -1,0 +1,5 @@
+<ng-container *ngIf="items">
+  <div class="item" *ngFor="let item of items; let i = index">
+    <img class="item__img" *ngIf="item != null" [ngClass]="{'is-selected': selectedItem == i}" [src]="item.icon" draggable="false" (click)="selectItem(i)"/>
+  </div>
+</ng-container>

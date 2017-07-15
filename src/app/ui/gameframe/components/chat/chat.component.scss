@@ -1,0 +1,103 @@
+@import "~assets/scss/_common";
+
+.display-box {
+  @include grid(row, null, align-bottom);
+  position: absolute;
+  bottom: 45px;
+  left: 7px;
+  width: 504px;
+  max-height: 114px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2px 5px;
+  padding-right: 16px;
+  cursor: default;
+}
+
+.chat-message {
+    @include grid(column, 12);
+    font-family: $brand-font-secondary;
+    margin-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    &--game {
+      span {
+        color: $brand-black;
+      }
+    }
+    &--public {
+      span {
+        color: $brand-blue;
+        padding-left: 1px;
+      }
+    }
+  }
+
+.input-box {
+  @include grid(row, null, align-left, no-wrap);
+  position: absolute;
+  bottom: 29px;
+  left: 7px;
+  width: 503px;
+  height: 18px;
+  padding-left: 5px;
+  overflow: hidden;
+  .input-label {
+    @include grid(column, auto);
+    position: relative;
+  }
+  .input-container {
+    @include grid(column, auto);
+    width: 100%;
+    margin-left: 4px;
+    height: 18px;
+    input {
+      font-family: $brand-font-secondary;
+      font-size: 16px;
+      line-height: 15px;
+      color: $brand-blue;
+      background: none;
+      border: none;
+      height: 18px;
+      width: 100%;
+    }
+  }  
+}
+
+/**
+ *  Webkit scrollbar styling
+ */
+::-webkit-scrollbar {
+  width: 16px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-button:single-button {
+  background-repeat: no-repeat;
+  border: $border;
+  height: 16px;
+  width: 16px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background: url("~assets/img/scrollbar-button-vertical-decrement-texture.png");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background: url("~assets/img/scrollbar-button-vertical-increment-texture.png");
+}
+ 
+::-webkit-scrollbar-track {
+  background: url("~assets/img/scrollbar-track-texture.png");
+  background-repeat: repeat-y;
+  border-left: $border;
+  border-right: $border;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: url("~assets/img/scrollbar-thumb-texture.png");
+  border: $border;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin-top: -1px;
+}
